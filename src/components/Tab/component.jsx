@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-key */
 import { Button } from "../Button/component"
 
-export const Tabs = ({onClick, title}) => {
+export const Tab = ({onClick, title}) => {
     return (
         <Button 
             onClick={onClick} 

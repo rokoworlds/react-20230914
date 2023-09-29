@@ -1,11 +1,13 @@
 /* eslint-disable react/jsx-key */
-import { restaurants } from '../../constant/mock';
+import { Review } from '../Review/component';
 
-export const Reviews = ({index}) => {
+export const Reviews = ({reviews}) => {
     return (
         <ul>
-            {restaurants[index].reviews.map((item) => (
-                <li>{item.user}: {item.text}</li>
+            {reviews.map((review) => (
+                <li>
+                    <Review review={review} /> 
+                </li>
             ))}
         </ul>
     )

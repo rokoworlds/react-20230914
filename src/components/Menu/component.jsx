@@ -1,15 +1,14 @@
 /* eslint-disable react/jsx-key */
-import { restaurants } from '../../constant/mock';
-import { DishElement } from '../DishElement/component';
+import { Dish } from '../Dish/component';
 
-export const Menu = ({index}) => {
+export const Menu = ({dishes}) => {
     return (
-        <div>
-            <ul>
-                {restaurants[index].menu.map(({name}) => (
-                    <DishElement title={name} />
-                ))}
-            </ul>
-        </div>
+        <ul>
+            {dishes.map((dish) => (
+                <li>
+                    <Dish dish={dish} />
+                </li>
+            ))}
+        </ul>
     )
 }
