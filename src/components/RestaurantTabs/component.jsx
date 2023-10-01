@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-key */
 import { Tab } from "../Tab/component"
 
 export const RestaurantTabs = ({restaurants, onTabSelect}) => {
@@ -6,6 +5,7 @@ export const RestaurantTabs = ({restaurants, onTabSelect}) => {
         <div>
             {restaurants.map((restaurant, index) => (
                 <Tab 
+                    key={restaurant.id}
                     onClick={() => onTabSelect(index)} 
                     title={restaurant.name}
                 />

@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Button } from "../Button/component"
+import { Button } from "../Button/component";
 
 export const Dish = ({dish}) => {
     const [amount, setAmount] = useState(0)
