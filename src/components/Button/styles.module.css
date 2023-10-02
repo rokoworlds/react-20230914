@@ -1,0 +1,14 @@
+.button {
+    font-size: 18px;
+    color: #030C07;
+    border-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    border: none;
+    background-color: #BAEDD1;
+}
+
+.button.disabled {
+    background-color: gainsboro;  
+}
+

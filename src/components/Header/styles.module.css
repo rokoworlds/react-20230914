@@ -1,0 +1,14 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
+    background-color: #FBFEFC;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    color:#030C07;;
+    font-family: 'Paytone One', sans-serif;
+}
+
