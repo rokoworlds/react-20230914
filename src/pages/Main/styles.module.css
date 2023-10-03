@@ -1,3 +1,28 @@
-.grid {
-    display: grid;
+.flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+}
+
+.footer {
+    margin-top: auto;
+}
+
+.tabs {
+    display: flex;
+    gap: 5px;
+    padding-top: 15px;
+    margin: auto;
+}
+
+.restaurant {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

@@ -10,15 +10,19 @@ export const MainPage = () => {
     const [currentRestaurantIndex, setCurrentRestaurantIndex] = useState(0);
 
     return (
-        <div className={styles.grid}>
-            <Header />
+        <div className = {styles.flex}>
+            <Header className = {styles.header} />
             <RestaurantTabs
-                restaurants={restaurants}
+                restaurants = {restaurants}
                 onTabSelect={setCurrentRestaurantIndex}
                 currentRestaurantIndex={currentRestaurantIndex}
+                className={styles.tabs}
             />
-            <Restaurant restaurant={restaurants[currentRestaurantIndex]}/>
-            <Footer />
+            <Restaurant 
+                restaurant = {restaurants[currentRestaurantIndex]}
+                className = {styles.restaurant}    
+            />
+            <Footer className={styles.footer}/>
         </div>
     )
 }

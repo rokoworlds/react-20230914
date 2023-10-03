@@ -1,5 +1,6 @@
+import classNames from 'classnames'
 import styles from './styles.module.css'
 
-export const Footer = () => {
-    return <footer className={styles.footer}></footer>
+export const Footer = ({className}) => {
+    return <footer className={classNames(styles.footer, className)}></footer>
 }
