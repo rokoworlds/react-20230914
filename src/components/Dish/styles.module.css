@@ -5,9 +5,15 @@
     margin: 10px;
 }
 
-.button:hover {
+.button.earth:hover {
     color: #2DAE67;
     background-color: white;
     border: 1px solid #2DAE67;
+}
+
+.button.fire:hover {
+    color: #FF9B50;
+    background-color: white;
+    border: 1px solid #FF9B50;
 }
 

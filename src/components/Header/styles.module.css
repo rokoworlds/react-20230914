@@ -7,5 +7,9 @@
     background-color: #FBFEFC;
     color:#030C07;;
     font-family: 'Paytone One', sans-serif;
+    gap: 20px;
 }
 
+.button:hover {
+    transform: scale(1.05);
+}

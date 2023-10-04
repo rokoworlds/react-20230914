@@ -5,10 +5,18 @@
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
     border: none;
-    background-color: #BAEDD1;
+    transition: ease-in-out;
+    
 }
 
 .button.disabled {
     background-color: gainsboro;  
 }
 
+.earth {
+    background-color: #BAEDD1;
+}
+
+.fire {
+    background-color: #FFBB5C;
+}

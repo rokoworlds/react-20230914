@@ -1,10 +1,16 @@
 .button {
     width: 295px;
     height: 52px;
-    background-color: #2FB66C;
     border: none;
     color: white;
-    
+}
+
+.fire {
+    background-color: #FF9B50;
+}
+
+.earth {
+    background-color: #2FB66C;
 }
 
 .button:hover {

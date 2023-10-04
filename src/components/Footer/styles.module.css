@@ -1,4 +1,12 @@
 .footer {
     height: 90px;
+    
+}
+
+.fire {
+    background-color: #FFB26B;
+}
+
+.earth {
     background-color: #BAEDD1;
 }
