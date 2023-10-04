@@ -6,6 +6,7 @@
     font-weight: 800;
     border: none;
     transition: ease-in-out;
+    transition-duration: 0.2s;
     
 }
 

@@ -1,0 +1,46 @@
+.modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    background-color: white;
+    padding: 40px;
+    border-radius: 4px;
+}
+
+.button {
+    padding: 5px 25px;
+    margin: 10px;
+    transition: ease-in-out;
+    transition-duration: 0.3s;
+}
+
+.button:hover {
+    box-shadow: 0 5px 16px 0 rgba(0,0,0,0.24);
+}
+
+.input {
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+.textarea {
+    border: none;
+    outline: none;
+}
+
+.selectContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.select {
+    display: flex;
+    align-items: center;
+    font-family: 'Paytone One', sans-serif;
+    font-size: 20px;
+    border: none;
+    outline: none;
+}

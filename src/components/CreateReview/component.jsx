@@ -1,5 +1,6 @@
-import { useReducer } from "react"
+import { useReducer } from "react";
 import { Button } from "../Button/component";
+import styles from './styles.module.css'
 
 const DEFAULT_VALUE = {
     user: '',
@@ -22,32 +23,42 @@ const reducer = (state, action) => {
     }
 }
 
-export const CreateReview = () => {
+export const CreateReview = ({onClose}) => {
     const [formValue, dispatch] = useReducer(reducer, DEFAULT_VALUE)
-
-    console.log(formValue)
     return (
-        <div>
+        <div className={styles.modal}>
             <h4>Create Review</h4>
             <div>
-                <label>Name</label>
-                <input type="text" value={formValue.user} onChange={(event) => dispatch({ type: 'setUser', payload: event.target.value })}/>
+                <div>
+                    <fieldset>
+                        <legend>Name</legend>
+                        <input className={styles.input} type="text" value={formValue.user} onChange={(event) => dispatch({ type: 'setUser', payload: event.target.value })}/>
+                    </fieldset>
+                </div>
+                <div>
+                    <fieldset>
+                        <legend>Review</legend>
+                        <textarea  className={styles.textarea} name="review" rows={10} cols={50} value={formValue.text} onChange={(event) => dispatch({ type: 'setText', payload: event.target.value })}></textarea>
+                    </fieldset>
+                </div>
             </div>
+                <div>
+                    <fieldset className={styles.selectContainer}>
+                        <legend>Rating</legend>
+                        <select className={styles.select} name="rating" value={formValue.rating} onChange={(event) => dispatch({ type: 'setRating', payload: Number(event.target.value) })}>
+                            <option value="5">5 😍</option>
+                            <option value="4">4 😀</option>
+                            <option value="3">3 😊</option>
+                            <option value="2">2 ☹️</option>
+                            <option value="1">1 😡</option>
+                        </select>
+                    </fieldset>
+                </div>
+            {/* <Button title='Save' onClick={() => dispatch({type: 'reset'})} /> */}
             <div>
-                <label>Review</label>
-                <textarea name="review" rows={4} cols={40} value={formValue.text} onChange={(event) => dispatch({ type: 'setText', payload: event.target.value })}></textarea>
+                <Button className={styles.button} title='Save' onClick={onClose} />
+                <Button className={styles.button} title='Close' onClick={onClose} />
             </div>
-            <div>
-                <label>Rating</label>
-                <select name="rating" value={formValue.rating} onChange={(event) => dispatch({ type: 'setRating', payload: Number(event.target.value) })}>
-                    <option value="5">5</option>
-                    <option value="4">4</option>
-                    <option value="3">3</option>
-                    <option value="2">2</option>
-                    <option value="1">1</option>
-                </select>
-            </div>
-            <Button title='Save' onClick={() => dispatch({type: 'reset'})} />
         </div>
         )
 }
