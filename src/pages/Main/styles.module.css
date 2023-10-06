@@ -1,4 +1,4 @@
-.flex {
+.position {
     display: flex;
     flex-direction: column;
 }
@@ -13,16 +13,5 @@
 }
 
 .tabs {
-    display: flex;
-    gap: 5px;
-    padding-top: 15px;
     margin: auto;
-}
-
-.restaurant {
-    min-height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }

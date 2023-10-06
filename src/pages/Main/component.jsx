@@ -13,7 +13,7 @@ export const MainPage = () => {
 
     return (
         <ThemeProvider>
-            <div className = {styles.flex}>
+            <div className = {styles.position}>
                 <Header className = {styles.header} />
                 <RestaurantTabs
                     restaurants = {restaurants}
@@ -23,7 +23,6 @@ export const MainPage = () => {
                 />
                 <Restaurant 
                     restaurant = {restaurants[currentRestaurantIndex]}
-                    className = {styles.restaurant}    
                 />
                 <Footer className={styles.footer}/>
             </div>
