@@ -55,9 +55,9 @@ export const CreateReview = ({onClose}) => {
                     </fieldset>
                 </div>
             {/* <Button title='Save' onClick={() => dispatch({type: 'reset'})} /> */}
-            <div>
-                <Button className={styles.button} title='Save' onClick={onClose} />
-                <Button className={styles.button} title='Close' onClick={onClose} />
+            <div >
+                <Button className={styles.button} title='Save' onClick={onClose} style={'reviewStyle'} />
+                <Button className={styles.button} title='Close' onClick={onClose} style={'reviewStyle'} />
             </div>
         </div>
         )
