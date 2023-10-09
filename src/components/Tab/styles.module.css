@@ -1,0 +1,22 @@
+.button {
+    width: 295px;
+    height: 52px;
+    background-color: #2FB66C;
+    border: none;
+    color: white;
+    
+}
+
+.button:hover {
+    background-color: #030C07;
+    box-shadow: 1px 3px 5px rgba(0,0,0,0.3);
+}
+
+.button:active {
+    transform: scale(1.01);
+}
+
+.active {
+    background-color: #030C07;
+    box-shadow: 2px 3px 5px rgba(0,0,0,0.5);
+}
