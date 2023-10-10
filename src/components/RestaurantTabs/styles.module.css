@@ -1,0 +1,5 @@
+.tabs {
+    display: flex;
+    padding-top: 15px;
+    justify-content: space-evenly;
+}

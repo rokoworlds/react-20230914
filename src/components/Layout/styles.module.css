@@ -1,0 +1,22 @@
+.root {
+    display: flex;
+    flex-direction: column;
+    z-index: 0;
+}
+
+.modalContainer {
+    z-index: 1;
+    position: absolute;
+    left: 50vw;
+    top: 50vh;
+    transform: translate(-50%, -50%);
+}
+
+.header {
+    position: sticky;
+    top: 0;
+}
+
+.footer {
+    margin-top: auto;
+}

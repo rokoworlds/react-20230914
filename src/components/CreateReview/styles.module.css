@@ -1,0 +1,39 @@
+.modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 40px;
+    border-radius: 4px;
+}
+
+.input {
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+.textarea {
+    border: none;
+    outline: none;
+}
+
+.selectContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.select {
+    display: flex;
+    align-items: center;
+    font-family: 'Paytone One', sans-serif;
+    font-size: 20px;
+    border: none;
+    outline: none;
+}
+
+.button {
+    margin-left: 20px;
+    margin: 10px;
+}
