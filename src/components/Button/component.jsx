@@ -3,7 +3,7 @@ import styles from './styles.module.css'
 import { useContext } from "react";
 import { ThemeContext } from "../../contexts/Theme";
 
-export const Button = ({title, onClick, disabled, isActive, style, className}) => {
+export const Button = ({children, onClick, disabled, isActive, style, className}) => {
 
     const {theme} = useContext(ThemeContext);
     return (
@@ -19,7 +19,7 @@ export const Button = ({title, onClick, disabled, isActive, style, className}) =
             onClick={onClick} 
             disabled={disabled}
         >
-            {title}
+            {children}
         </button> 
     )
 }

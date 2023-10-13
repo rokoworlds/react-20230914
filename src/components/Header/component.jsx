@@ -7,8 +7,8 @@ import { ThemeContext } from '../../contexts/Theme';
 export const Header = ({className}) => {
     const {theme, setTheme} = useContext(ThemeContext);
     return (
-    <header className={classNames(styles.navbar, className)}>
+    <header className={classNames(styles.header, className)}>
         <h1 >GOOD FOOD</h1>
-        <Button className={styles.button} title={theme} onClick={() => setTheme(theme === 'earth' ?'fire' : 'earth')}/>
+        <Button className={styles.button} onClick={() => setTheme(theme === 'earth' ?'fire' : 'earth')}>{theme}</Button>
     </header>)
 }

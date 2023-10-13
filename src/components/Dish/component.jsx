@@ -1,26 +1,28 @@
 import { useState } from "react"
 import { Button } from "../Button/component";
 
-export const Dish = ({dish}) => {
+export const Dish = ({name}) => {
     const [amount, setAmount] = useState(0);
 
     return (
         <div>
-            {dish.name} 
+            {name} 
             - 
             <Button 
-                title={'-'} 
                 onClick={() => setAmount(amount - 1)} 
                 disabled={amount === 0}
-                style={'dishStyle'}
-            />
+                style={'small'}
+            >
+                -
+            </Button>
             {amount}
             <Button 
-                title={'+'} 
                 onClick={() => setAmount(amount + 1)} 
                 disabled={amount === 5}
-                style={'dishStyle'}
-            />
+                style={'small'}
+            >
+                +
+            </Button>
         </div>
     )
 }
