@@ -1,8 +1,11 @@
 import { useState } from "react"
 import { Button } from "../Button/component";
+import { selectDishById } from "../../redux/entities/dish/selectors";
+import { useSelector } from "react-redux";
 
-export const Dish = ({name}) => {
+export const Dish = ({dishId}) => {
     const [amount, setAmount] = useState(0);
+    const name = useSelector((state) => selectDishById(state, dishId).name);
 
     return (
         <div>

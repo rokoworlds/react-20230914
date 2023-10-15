@@ -2,14 +2,15 @@ import classNames from "classnames";
 import { Tab } from "../Tab/component";
 import styles from './styles.module.css'
 
-export const RestaurantTabs = ({restaurants, onTabSelect, currentRestaurantIndex, className}) => {
+export const RestaurantTabs = ({restaurantIds, onTabSelect, currentRestaurantIndex, className}) => {
+   
     return (
         <div className={classNames(styles.tabs, className)}>
-            {restaurants.map((restaurant, index) => (
+            {restaurantIds.map((restaurantId, index) => (
                 <Tab 
-                    key={restaurant.id}
+                    key={restaurantId}
                     onClick={() => onTabSelect(index)} 
-                    title={restaurant.name}
+                    restaurantId={restaurantId}
                     isActive={currentRestaurantIndex === index}
                 />
                 
