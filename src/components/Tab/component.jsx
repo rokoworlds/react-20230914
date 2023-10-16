@@ -5,9 +5,10 @@ export const Tab = ({onClick, title, isActive}) => {
     return (
         <Button 
             onClick={onClick} 
-            title={title} 
             isActive={isActive}
-            style={'tabStyle'}
-        />
+            size={'large'}
+        >
+            {title}
+        </Button>
     )
 }

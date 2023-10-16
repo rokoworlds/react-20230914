@@ -5,7 +5,7 @@ export const Menu = ({dishes}) => {
         <ul>
             {dishes.map((dish) => (
                 <li key={dish.id}>
-                    <Dish dish={dish} />
+                    <Dish name={dish.name} />
                 </li>
             ))}
         </ul>

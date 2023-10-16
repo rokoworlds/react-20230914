@@ -26,54 +26,54 @@
     background-color: #FFBB5C;
 }
 
-.dishStyle {
+.small {
     width: 30px;
     height: 30px;
     color: white;
     margin: 10px;
 }
 
-.dishStyle.earth:hover {
+.small.earth:hover {
     color: #2DAE67;
     background-color: white;
     border: 1px solid #2DAE67;
 }
 
-.dishStyle.fire:hover {
+.small.fire:hover {
     color: #FF9B50;
     background-color: white;
     border: 1px solid #FF9B50;
 }
 
-.tabStyle {
+.large {
     width: 295px;
     height: 52px;
     border: none;
     color: white;
 }
 
-.tabStyle.fire {
+.large.fire {
     background-color: #FF9B50;
 }
 
-.tabStyle.earth {
+.large.earth {
     background-color: #2FB66C;
 }
 
-.tabStyle:hover {
+.large:hover {
     background-color: #030C07;
     box-shadow: 1px 3px 5px rgba(0,0,0,0.3);
 }
 
-.tabStyle:active {
+.large:active {
     transform: scale(1.05);
 }
 
-.tabStyle.active {
+.large.active {
     background-color: #030C07;
     box-shadow: 2px 3px 5px rgba(0,0,0,0.5);
 }
 
-.reviewStyle {
+.medium {
     padding: 5px 25px;
 }
