@@ -6,7 +6,7 @@ export const Tab = ({onClick, title, isActive}) => {
         <Button 
             onClick={onClick} 
             isActive={isActive}
-            style={'large'}
+            size={'large'}
         >
             {title}
         </Button>
