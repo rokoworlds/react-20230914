@@ -1,27 +1,24 @@
 import { useState } from "react";
-import { Restaurant } from "../../components/Restaurant/component"
-import { RestaurantTabs } from "../../components/RestaurantTabs/component";
 import { ThemeProvider } from "../../contexts/Theme";
 import { Layout } from "../../components/Layout/component";
-import { useSelector } from "react-redux";
-import { selectRestaurantIds } from "../../redux/entities/restaurant/selectors";
+import { RestaurantTabsContainer } from "../../components/RestaurantTabs/container";
+import { RestaurantContainer } from "../../components/Restaurant/container";
 
 
 export const MainPage = () => {
-    const [currentRestaurantIndex, setCurrentRestaurantIndex] = useState(0);
-    const restaurantIds = useSelector((state) => selectRestaurantIds(state));
-
+    const [currentRestaurantId, setCurrentRestaurantId] = useState();
+    
     return (
         <ThemeProvider>
            <Layout>
-                <RestaurantTabs
-                    restaurantIds = {restaurantIds}
-                    onTabSelect={setCurrentRestaurantIndex}
-                    currentRestaurantIndex={currentRestaurantIndex}
+                <RestaurantTabsContainer
+                    // restaurantIds = {restaurantIds}
+                    onTabSelect={setCurrentRestaurantId}
+                    currentRestaurantIndex={currentRestaurantId}
                 />
-                <Restaurant 
-                    restaurantId = {restaurantIds[currentRestaurantIndex]}
-                />
+                { currentRestaurantId && <RestaurantContainer 
+                    restaurantId = {currentRestaurantId}
+                />}
            </Layout>
         </ThemeProvider>
         
