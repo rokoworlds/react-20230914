@@ -1,25 +1,24 @@
 import { useState } from "react";
-import { Restaurant } from "../../components/Restaurant/component"
-import { restaurants } from '../../constant/mock';
-import { RestaurantTabs } from "../../components/RestaurantTabs/component";
 import { ThemeProvider } from "../../contexts/Theme";
 import { Layout } from "../../components/Layout/component";
+import { RestaurantTabsContainer } from "../../components/RestaurantTabs/container";
+import { RestaurantContainer } from "../../components/Restaurant/container";
 
 
 export const MainPage = () => {
-    const [currentRestaurantIndex, setCurrentRestaurantIndex] = useState(0);
-
+    const [currentRestaurantId, setCurrentRestaurantId] = useState();
+    
     return (
         <ThemeProvider>
            <Layout>
-                <RestaurantTabs
-                    restaurants = {restaurants}
-                    onTabSelect={setCurrentRestaurantIndex}
-                    currentRestaurantIndex={currentRestaurantIndex}
+                <RestaurantTabsContainer
+                    // restaurantIds = {restaurantIds}
+                    onTabSelect={setCurrentRestaurantId}
+                    currentRestaurantIndex={currentRestaurantId}
                 />
-                <Restaurant 
-                    restaurant = {restaurants[currentRestaurantIndex]}
-                />
+                { currentRestaurantId && <RestaurantContainer 
+                    restaurantId = {currentRestaurantId}
+                />}
            </Layout>
         </ThemeProvider>
         

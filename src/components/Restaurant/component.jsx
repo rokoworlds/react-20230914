@@ -8,8 +8,8 @@ export const Restaurant = ({restaurant}) => {
     return (
         <div className={styles.restaurant}>
             <h2 className={styles.title}>{restaurant.name}</h2>
-            <Menu dishes={restaurant.menu} />
-            <Reviews reviews={restaurant.reviews} /> 
+             <Menu dishesIds={restaurant.menu} />
+            <Reviews reviewsIds={restaurant.reviews} />
             <CreateReviewModal />
         </div>
     )
