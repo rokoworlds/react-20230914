@@ -10,7 +10,7 @@ export const Dish = ({dish}) => {
             <Button 
                 onClick={() => setAmount(amount - 1)} 
                 disabled={amount === 0}
-                style={'small'}
+                size={'small'}
             >
                 -
             </Button>
@@ -18,7 +18,7 @@ export const Dish = ({dish}) => {
             <Button 
                 onClick={() => setAmount(amount + 1)} 
                 disabled={amount === 5}
-                style={'small'}
+                size={'small'}
             >
                 +
             </Button>
