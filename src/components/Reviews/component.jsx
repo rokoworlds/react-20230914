@@ -1,9 +1,9 @@
 import { ReviewContainer } from '../Review/container';
 
-export const Reviews = ({reviewsIds}) => {
+export const Reviews = ({reviews}) => {
     return (
         <ul>
-            {reviewsIds.map((id) => (
+            {reviews.map((id) => (
                 <li key={id}>
                     <ReviewContainer reviewId={id} /> 
                 </li>

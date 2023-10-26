@@ -5,7 +5,7 @@ export const Dish = ({dish}) => {
     const [amount, setAmount] = useState(0);
     return (
         <div>
-            {dish} 
+            {dish.name} 
             - 
             <Button 
                 onClick={() => setAmount(amount - 1)} 
