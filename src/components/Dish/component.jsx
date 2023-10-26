@@ -1,14 +1,16 @@
-import { useState } from "react"
 import { Button } from "../Button/component";
+import { useDispatch } from "react-redux";
+import { cartActions } from "../../redux/ui/cart";
 
-export const Dish = ({dish}) => {
-    const [amount, setAmount] = useState(0);
+export const Dish = ({dish, amount, dishId}) => {
+    console.log(amount)
+    const dispatch = useDispatch();
     return (
         <div>
             {dish.name} 
             - 
             <Button 
-                onClick={() => setAmount(amount - 1)} 
+                onClick={() => dispatch(cartActions.decrement(dishId))} 
                 disabled={amount === 0}
                 style={'small'}
             >
@@ -16,7 +18,7 @@ export const Dish = ({dish}) => {
             </Button>
             {amount}
             <Button 
-                onClick={() => setAmount(amount + 1)} 
+                onClick={() => dispatch(cartActions.increment(dishId))} 
                 disabled={amount === 5}
                 style={'small'}
             >
