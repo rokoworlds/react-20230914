@@ -5,13 +5,12 @@ import styles from './styles.module.css'
 
 
 export const Restaurant = ({restaurant}) => {
-    console.log(restaurant.id)
     return (
         <div className={styles.restaurant}>
             <h2 className={styles.title}>{restaurant.name}</h2>
             <MenuContainer restaurantId={restaurant.id}/>
             <ReviewsContainer restaurantId={restaurant.id} />
-            <CreateReviewModal />
+            <CreateReviewModal restaurantId={restaurant.id} />
         </div>
     )
 }

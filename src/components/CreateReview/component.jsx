@@ -3,7 +3,7 @@ import { Button } from "../Button/component";
 import styles from './styles.module.css'
 
 const DEFAULT_VALUE = {
-    user: '',
+    userId: 'a304959a-76c0-4b34-954a-b38dbf310360',
     text: '',
     rating: 5
 };
@@ -23,7 +23,7 @@ const reducer = (state, action) => {
     }
 }
 
-export const CreateReview = ({onClose}) => {
+export const CreateNewReview = ({onClose, onSubmit}) => {
     const [formValue, dispatch] = useReducer(reducer, DEFAULT_VALUE)
     return (
         <div className={styles.modal}>
@@ -56,7 +56,10 @@ export const CreateReview = ({onClose}) => {
                 </div>
             {/* <Button title='Save' onClick={() => dispatch({type: 'reset'})} /> */}
             <div >
-                <Button className={styles.button} onClick={onClose} style={'medium'} > Save </Button>
+                <Button className={styles.button} onClick={
+                    () => onSubmit(formValue)
+                    
+                    } style={'medium'} > Save </Button>
                 <Button className={styles.button} onClick={onClose} style={'medium'} > Close </Button>
             </div>
         </div>
