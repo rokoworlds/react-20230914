@@ -3,7 +3,6 @@ import { useDispatch } from "react-redux";
 import { cartActions } from "../../redux/ui/cart";
 
 export const Dish = ({dish, amount, dishId}) => {
-    console.log(amount)
     const dispatch = useDispatch();
     return (
         <div>
